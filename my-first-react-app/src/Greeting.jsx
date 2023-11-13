@@ -4,7 +4,7 @@ export default function Greeting() {
   return (
     <>
       <div className="intro">
-        <h1>Welcome to my website!</h1>
+        <h1>Welcome to my website!!!</h1>
       </div>
       <p className="summary">
         You can find my thoughts here.
