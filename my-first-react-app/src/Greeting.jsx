@@ -3,6 +3,7 @@ import React from 'react'
 export default function Greeting() {
 
   const animals = ["Lion", "Cow", "Snake", "Lizard"];
+  const animaList = animals.map(animal => <li>{animal}</li> )
 
   return (
     <>
@@ -17,9 +18,7 @@ export default function Greeting() {
       <div>
       <h1>Animals: </h1>
       <ul>
-        {animals.map((animal) => {
-          return <li key={animal}>{animal}</li>;
-        })}
+        {animaList}
       </ul>
     </div>
     </>
