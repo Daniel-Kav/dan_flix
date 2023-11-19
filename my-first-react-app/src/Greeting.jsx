@@ -13,7 +13,7 @@ export default function Greeting() {
       <p className="summary">
         You can find my thoughts here.
         <br /><br />
-        <b>And <i>pictures</i></b> of scientists!
+        <b>And <i>picturess</i></b> of scientists!
       </p>
       <div>
       <h1>Animals: </h1>
