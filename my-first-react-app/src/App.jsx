@@ -1,39 +1,22 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect } from "react";
 import './App.css';
+import SearchIcon from './search.svg';
 
-const API_URL = 'http://www.omdbapi.com/?i=tt3896198&apikey=5b14d31c';
+const API_URL = " http://www.omdbapi.com/?i=tt3896198&apikey=5b14d31c"
 
-function App() {
-  const [movieData, setMovieData] = useState(null);
+const App = () => {
 
+
+  const SearchMovies = async (title) => {
+    const response = await fetch(`${API_URL}&s=${title}`);
+    const data = await response.json();
+    console.log(data.Search);
+  }
   useEffect(() => {
-    // Define an async function to fetch data
-    const fetchData = async () => {
-      try {
-        const response = await fetch(API_URL);
-        const data = await response.json();
-        setMovieData(data);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    };
-
-    // Call the async function
-    fetchData();
-  }, []); // The empty dependency array ensures that the effect runs once after the initial render
-
+    SearchMovies('Avengers');
+  }, [])
   return (
-    <div>
-      <h1>Hello World!!!</h1>
-      {movieData && (
-        <div>
-          <h2>Movie Details:</h2>
-          <p>Title: {movieData.Title}</p>
-          <p>Year: {movieData.Year}</p>
-          {/* Add more details as needed */}
-        </div>
-      )}
-    </div>
+    <h1>App</h1>
   );
 }
 

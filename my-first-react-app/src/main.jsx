@@ -1,13 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import App from './App.jsx';
-import './index.css';
-import MovieCard from './MovieCard.jsx';
 
-ReactDOM.render(
+
+const root = document.getElementById('root');
+
+// Use createRoot instead of ReactDOM.render
+const rootElement = createRoot(root);
+rootElement.render(
   <React.StrictMode>
     <App />
-    <MovieCard />
-  </React.StrictMode>,
-  document.getElementById('root')
+  </React.StrictMode>
 );
