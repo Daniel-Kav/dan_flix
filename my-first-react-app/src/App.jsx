@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.css';
 
+const API_URL = 'http://www.omdbapi.com/?i=tt3896198&apikey=5b14d31c'
+
 function App() {
   
 
