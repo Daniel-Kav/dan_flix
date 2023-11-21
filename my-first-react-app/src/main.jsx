@@ -1,9 +1,13 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
-import Greeting from './MovieCard.jsx'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App.jsx';
+import './index.css';
+import MovieCard from './MovieCard.jsx';
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  
-)
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+    <MovieCard />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
